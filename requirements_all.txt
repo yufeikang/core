@@ -104,6 +104,9 @@ adafruit-circuitpython-bmp280==3.1.1
 # homeassistant.components.mcp23017
 adafruit-circuitpython-mcp230xx==2.2.2
 
+# homeassistant.components.adax
+adax==0.0.1
+
 # homeassistant.components.androidtv
 adb-shell[async]==0.2.1
 
