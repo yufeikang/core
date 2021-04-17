@@ -308,10 +308,9 @@ class FlowHandler:
 
     # Set by flow manager
     cur_step: dict[str, str] | None = None
-    # Ignore types: https://github.com/PyCQA/pylint/issues/3167
-    flow_id: str = None  # type: ignore
-    hass: HomeAssistant = None  # type: ignore
-    handler: str = None  # type: ignore
+    flow_id: str
+    hass: HomeAssistant
+    handler: str
     # Ensure the attribute has a subscriptable, but immutable, default value.
     context: dict[str, Any] = MappingProxyType({})  # type: ignore
 

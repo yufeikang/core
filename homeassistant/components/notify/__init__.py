@@ -116,8 +116,7 @@ class BaseNotificationService:
 
     # While not purely typed, it makes typehinting more useful for us
     # and removes the need for constant None checks or asserts.
-    # Ignore types: https://github.com/PyCQA/pylint/issues/3167
-    hass: HomeAssistant = None  # type: ignore
+    hass: HomeAssistant
 
     # Name => target
     registered_targets: dict[str, str]

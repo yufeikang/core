@@ -110,13 +110,12 @@ class Entity(ABC):
     # SAFE TO OVERWRITE
     # The properties and methods here are safe to overwrite when inheriting
     # this class. These may be used to customize the behavior of the entity.
-    entity_id: str = None  # type: ignore
+    entity_id: str
 
     # Owning hass instance. Will be set by EntityPlatform
     # While not purely typed, it makes typehinting more useful for us
     # and removes the need for constant None checks or asserts.
-    # Ignore types: https://github.com/PyCQA/pylint/issues/3167
-    hass: HomeAssistant = None  # type: ignore
+    hass: HomeAssistant
 
     # Owning platform instance. Will be set by EntityPlatform
     platform: EntityPlatform | None = None
