@@ -99,7 +99,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Download nightly wheels of frontend
-        if: needs.init.outputs.channel == 'dev'
+        #if: needs.init.outputs.channel == 'dev'
         uses: dawidd6/action-download-artifact@5c98f0b039f36ef966fdb7dfa9779262785ecb05 # v14
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
@@ -110,7 +110,7 @@ jobs:
           name: wheels
 
       - name: Download nightly wheels of intents
-        if: needs.init.outputs.channel == 'dev'
+        #if: needs.init.outputs.channel == 'dev'
         uses: dawidd6/action-download-artifact@5c98f0b039f36ef966fdb7dfa9779262785ecb05 # v14
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
@@ -121,13 +121,13 @@ jobs:
           name: package
 
       - name: Set up Python ${{ env.DEFAULT_PYTHON }}
-        if: needs.init.outputs.channel == 'dev'
+        #if: needs.init.outputs.channel == 'dev'
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
           python-version: ${{ env.DEFAULT_PYTHON }}
 
       - name: Adjust nightly version
-        if: needs.init.outputs.channel == 'dev'
+        #if: needs.init.outputs.channel == 'dev'
         shell: bash
         env:
           UV_PRERELEASE: allow
